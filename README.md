@@ -162,6 +162,7 @@ Ensure PostgreSQL is running via Docker before proceeding.
 From the root folder:
 
 ```bash
+yarn install
 yarn build
 ```
 
