@@ -2,7 +2,6 @@
 
 <div align="center">
   <h1>Mercur <br> Open Source Marketplace Platform</h1> 
-  <!-- Shields.io Badges -->
   <a href="https://github.com/mercurjs/mercur/tree/main?tab=MIT-1-ov-file">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg" />
   </a>
@@ -12,145 +11,206 @@
   <a href="https://rigbyjs.com/#contact">
     <img alt="Support" src="https://img.shields.io/badge/support-contact%20author-blueviolet.svg" />
   </a>
-  <!-- Website Links -->
   <p>
-    <a href="https://mercurjs.com/">Mercur</a> |   <a href="https://docs.mercurjs.com/">Docs</a> 
+    <a href="https://mercurjs.com/">Mercur</a> | <a href="https://docs.mercurjs.com/">Docs</a>
   </p> 
 </div>
 
 # What is Mercur?
 
-<a href="https://www.mercurjs.com/">Mercur</a> is the first
-truly limitless open source marketplace platform that
-combines the simplicity of SaaS with the freedom of open
-source. Built on
-[MedusaJS](https://github.com/medusajs/medusa), it empowers
-businesses to create custom marketplaces without choosing
-between ownership and ease of use.
+<a href="https://www.mercurjs.com/">Mercur</a> is an open source marketplace platform that combines the simplicity of SaaS with the flexibility and ownership of self-hosting. Built on <a href="https://github.com/medusajs/medusa">MedusaJS</a>, it enables businesses to launch and scale fully customizable marketplaces.
 
-Mercur is a platform to start, customize, manage, and scale
-your marketplace for every business model with a modern
-technology stack.
+Mercur allows you to start, customize, manage, and scale your marketplace using a modern and developer-friendly stack.
 
-## Announcing Mercur 1.0
+## Mercur 1.0
 
-After months of development, testing, and close
-collaboration with early adopters, we’re excited to announce
-the official release of **Mercur 1.0** - the first truly
-limitless marketplace platform. Version 1.0 is fully open
-source and ready to be self-hosted, giving you **full
-control over infrastructure, customizations, and data**.
+Mercur 1.0 is production-ready for B2C marketplaces and fully open source. It includes:
 
-With this version, **Mercur is production-ready for B2C
-marketplaces**. The first complete version includes a vendor
-system, admin panel, and a fully built B2C Storefront. Read
-more in
-**[official release announcement](https://www.mercurjs.com/updates/mercur-1-0-release)**
+- Vendor system  
+- Admin panel  
+- B2C storefront  
+- Self-hosted infrastructure with full data ownership  
+
+Read more in the official release announcement:  
+https://www.mercurjs.com/updates/mercur-1-0-release
 
 ## Why Choose Mercur?
 
-- Full Ownership: Unlike SaaS platforms, you own your
-  marketplace with no transaction fees or vendor lock-in
-- Modern Foundation: Built on MedusaJS, offering a modern
-  tech stack that developers love
-- Beautiful by Default: Create stunning storefronts without
-  sacrificing customization
+- Full ownership with no vendor lock-in  
+- Modern architecture powered by MedusaJS  
+- Customizable storefronts and workflows  
+- Built-in marketplace logic  
 
-## Power Any Marketplace Model
+## Marketplace Capabilities
 
-- Custom B2B Marketplace: Build enterprise-grade platforms
-  with specialized workflows
-- Custom B2C Marketplace: Create engaging consumer
-  marketplaces with modern UX
-- eCommerce Extension: Transform your store into a
-  marketplace (coming soon)
+- Custom B2B marketplace  
+- Custom B2C marketplace  
+- eCommerce-to-marketplace extension (coming soon)
 
 ![Mercur Use Cases](https://cdn.prod.website-files.com/6790aeffc4b432ccaf1b56e5/67b46aa08180d5b8499c6a15_Use-cases.jpg)
-&nbsp;
 
-# Ready-to-go marketplace features
+# Marketplace Components
 
-<b>Storefronts for Marketplace </b> <br> Customizable
-storefronts designed for B2B and B2C with all elements
-including browsing and buying products across multiple
-vendors at once.
+**Storefront**  
+Customizable marketplace storefront supporting multi-vendor checkout.
 
-Discover
-<a href="https://github.com/mercurjs/b2c-marketplace-storefront">B2C
-Storefront Repository</a> -
-<a href="https://b2c.mercurjs.com/">🛍️ Check demo </a>
+B2C Storefront Repository:  
+https://github.com/mercurjs/b2c-marketplace-storefront  
+Demo: https://b2c.mercurjs.com/
 
-<b>Admin Panel</b> <br> Control over whole marketplace:
-setting product categories, vendors, commissions and rules
+**Admin Panel**  
+Full control over products, categories, vendors, commissions, and rules.
 
-<b>Vendor Panel</b> <br> A powerful dashboard giving sellers
-complete control over their products, orders, and store
-management in one intuitive interface.
+**Vendor Panel**  
+Dashboard for sellers to manage products, orders, and stores.
 
-Discover
-<a href="https://github.com/mercurjs/vendor-panel">Vendor
-Panel</a> - <a href="https://www.mercurjs.com/contact">
-Contact us to get demo </a>
+Repository: https://github.com/mercurjs/vendor-panel  
 
-<b>Integrations</b> <br> Built-in integration with Stripe
-for payments and Resend for communication needs. More
-integrations coming soon.
+**Integrations**
+
+- Stripe  
+- Adyen  
+- Resend  
+- Algolia  
+- TalkJS  
 
 ![Mercur](https://cdn.prod.website-files.com/6790aeffc4b432ccaf1b56e5/67a1020f202572832c954ead_6b96703adfe74613f85133f83a19b1f0_Fleek%20Tilt%20-%20Readme.png)
 
-&nbsp;
+---
 
-## Quickstart
+# Installation (Local Development)
 
-**Step 1**: Install `mercur-cli` using NPM:
-
-```bash
-npm i -g mercur-cli
-```
-
-**Step 2**: Run CLI installation:
+### 1. Clone the repository
 
 ```bash
-mercur-cli install
+git clone https://github.com/checkatrade-labs/shop-mercur
+cd shop-mercur
+yarn
 ```
 
-or
+---
+
+### 2. Requirements
+
+- Node.js v20.x  
+- Yarn 1.22.x  
+- Docker (PostgreSQL running in Docker)  
+- Redis (optional)  
+
+Tested versions:
+
+- Node: v20.x  
+- Yarn: 1.22.x  
+
+---
+
+### 3. Environment Variables
+
+Create a `.env` file in the root and configure:
+
+```env
+LOG_LEVEL=debug
+
+STORE_CORS=http://localhost:3000
+ADMIN_CORS=http://localhost:9000,http://localhost:9001,http://localhost:5173,http://localhost:5174
+VENDOR_CORS=http://localhost:5173,http://localhost:5174
+AUTH_CORS=http://localhost:9000,http://localhost:9001,http://localhost:5173,http://localhost:3000,http://localhost:5174
+
+REDIS_URL=redis://localhost:6379
+
+JWT_SECRET=supersecret1
+COOKIE_SECRET=supersecret1
+
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/mercurjs
+DB_NAME=mercurjs
+
+STRIPE_SECRET_API_KEY=sk_test_secret_key
+STRIPE_CONNECTED_ACCOUNTS_WEBHOOK_SECRET=whsec_secret_key
+
+ADYEN_MERCHANT_ACCOUNT=CAT-Shop
+ADYEN_THEME_ID=theme_id_secret_key
+ADYEN_PAYMENT_API_KEY=payment_api_key_secret_key
+ADYEN_PLATFORM_API_KEY=platform_api_key_secret_key
+ADYEN_LEGAL_API_KEY=legal_api_key_secret_key
+ADYEN_URL_PREFIX=url_prefix_secret_key
+ADYEN_ENVIRONMENT=TEST
+ADYEN_HMAC_SECRET=hmac_secret_key
+ADYEN_ALLOWED_PAYMENT_METHODS="visa,mc,amex"
+
+RESEND_API_KEY=resend_api_key_secret_key
+RESEND_FROM_EMAIL=no-reply@shop.checkatrade.com
+
+ALGOLIA_APP_ID=algolia_app_id_secret_key
+ALGOLIA_API_KEY=algolia_api_key_secret_key
+
+VITE_TALK_JS_APP_ID=xxx
+VITE_TALK_JS_SECRET_API_KEY=xxx
+
+# Used in notifications
+VENDOR_PANEL_URL=http://localhost:5173
+ADMIN_PANEL_URL=http://localhost:8000
+STOREFRONT_URL=http://localhost:7001
+BACKEND_URL=http://localhost:9000
+```
+
+Ensure PostgreSQL is running via Docker before proceeding.
+
+---
+
+### 4. Build the project
+
+From the root folder:
 
 ```bash
-npx mercur-cli install
+yarn build
 ```
 
-The script will guide you through the installation process.
-You will have to enter project name and database connection
-parameters. Also, you'll be asked if you want to install
-Mercur Storefront and Vendor panel.
+---
 
-**Step 3**: After installation is done, move to the project
-catalog and start the servers:
+### 5. Setup database
 
 ```bash
-cd <yourProjectName>
-
-mercur-cli dev
+cd apps/backend
+npx medusa db:create
+npx medusa db:migrate
 ```
 
-&nbsp;
+---
 
-## Prerequisites
+### 6. Seed data
 
-- [Node.js v20+](https://nodejs.org/en/download)
-- [Yarn](https://yarnpkg.com/getting-started/install)
-- [PostgreSQL](https://git-scm.com/downloads)
-- [Git CLI](https://www.postgresql.org/download/)
+```bash
+yarn seed
+```
+
+The seed script outputs:
+
+- Example user credentials  
+- Publishable key required for the storefront  
+
+---
+
+### 7. Run backend
+
+```bash
+cd apps/backend
+yarn dev
+```
+
+The backend will start in development mode.
+
+---
 
 # Resources
 
-#### Learn more about Mercur
+Mercur Website:  
+https://www.mercurjs.com/
 
-- [Mercur Website](https://www.mercurjs.com/)
-- [Mercur Docs](https://docs.mercurjs.com/introduction)
+Mercur Docs:  
+https://docs.mercurjs.com/introduction
 
-#### Learn more about Medusa
+Medusa Website:  
+https://www.medusajs.com/
 
-- [Medusa Website](https://www.medusajs.com/)
-- [Medusa Docs](https://docs.medusajs.com/v2)
+Medusa Docs:  
+https://docs.medusajs.com/v2
